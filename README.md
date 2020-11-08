@@ -32,6 +32,16 @@ spring_datasource_url=jdbc:mysql://mysql:3306/mblog?useSSL=false&characterEncodi
 spring_datasource_username=mblog
 spring_datasource_password=mblog12345
 EOF
+
+# 或者设置
+cat >> .env << EOF
+MYSQL_HOST=mysql
+MYSQL_PORT=3306
+MYSQL_DATABASE=mblog
+MYSQL_USERNAME=mblog
+MYSQL_PASSWORD=mblog12345
+EOF
+
 ```
 
 ### Mblog 开源Java博客系统, 支持多用户, 支持切换主题

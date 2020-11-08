@@ -15,4 +15,3 @@ ENV TZ=Asia/Shanghai
 EXPOSE 8080
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["sh", "-c"]

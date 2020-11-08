@@ -23,5 +23,6 @@ rebel.xml
 *.db
 .DS_Store*
 .env*
+test
 
 !/src/main/java/com/mtons/mblog/base/storage/
