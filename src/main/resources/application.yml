@@ -45,6 +45,7 @@ spring:
         baseline-on-migrate: true
         encoding: UTF-8
         locations: classpath:scripts/migration
+
     data:
         jpa:
             repositories:

@@ -45,7 +45,7 @@
     <header class="main-header">
         <a href="${base}/index" class="logo">
             <span class="logo-mini">MBG</span>
-            <span class="logo-lg"><b>M</b>BLOG</span>
+            <span class="logo-lg"><b>D</b>blog</span>
         </a>
         <nav class="navbar navbar-static-top">
             <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
@@ -126,7 +126,7 @@
         <!-- To the right -->
         <div class="pull-right hidden-xs">${site.version}</div>
         <!-- Default to the left -->
-        <strong>Copyright &copy; 2019 <a href="#">mtons</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2020 <a href="#">Darebeat</a>.</strong> All rights reserved.
     </footer>
 </body>
 </html>

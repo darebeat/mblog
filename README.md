@@ -1,3 +1,39 @@
+# README
+
+Forked from [https://github.com/langhsu/mblog.git](https://github.com/langhsu/mblog.git)
+
+### docker-compose启动mysql实例
+
+```sh
+git clone https://github.com/darebeat/docker-center.git
+cd docker-center/deploy/mysql
+
+# 创建docker网络,总定义IP
+docker network create --driver=bridge --subnet=172.10.0.0/16 deploy
+docker network ls 
+docker network inspect deploy
+docker netwok rm deploy
+
+cat >> .env << EOF
+MYSQL_ROOT_PASSWORD=root
+MYSQL_USER=mblog
+MYSQL_PASSWORD=mblog12345
+MYSQL_DATABASE=mblog
+EOF
+
+docker-compose up -d
+```
+
+### docker-compose 配置
+
+```sh
+cat >> .env << EOF
+spring_datasource_url=jdbc:mysql://mysql:3306/mblog?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
+spring_datasource_username=mblog
+spring_datasource_password=mblog12345
+EOF
+```
+
 ### Mblog 开源Java博客系统, 支持多用户, 支持切换主题
 
 [![Author](https://img.shields.io/badge/author-landy-green.svg?style=flat-square)](http://mtons.com)
