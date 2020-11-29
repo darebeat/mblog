@@ -44,6 +44,7 @@
     <link href="${base}/dist/css/editor.css" rel="stylesheet"/>
     <link href="${base}/dist/css/plugins.css" rel="stylesheet"/>
     <link href="${base}/theme/classic/dist/css/style.css" rel="stylesheet"/>
+    <link href="${base}/theme/classic/dist/css/swiper-bundle.min.css" rel="stylesheet"/> 
 
     <link href="${base}/dist/vendors/simple-line-icons/css/simple-line-icons.css" rel="stylesheet"/>
     <link href="${base}/dist/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
@@ -83,6 +84,43 @@
     <div class="wrap">
         <!-- Main -->
         <div class="container">
+            <!-- top -->
+            <@contents featured=1  size=5>
+                <#if  results.content?size gt 0>
+                    <div class="row banner bg-animation">
+                        <!-- 幻灯片 轮播图 ↓--->
+                        <div class="swipers-slider">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <#list results.content as row>
+                                        <div class="swiper-slide">
+                                            <div class="banner-item col-xs-12 col-sm-12 col-md-12">
+                                                <div class="index-banner-box"<#if row.thumbnail?? && row.thumbnail?length gt 0> style="background-image:url(<@resource src=row.thumbnail/>)"<#else> style="background-image:url(${base}/dist/images/spinner-overlay.png)"</#if>>
+                                                    <a class="top" href="${base}/post/${row.id}">
+                                                        <div class="overlay"></div>
+                                                        <!--<div class="line"></div>-->
+                                                        <div class="title">
+                                                            <h3>
+                                                                <i class="icon icon-fire"></i>
+                                                                ${row.title?html}
+                                                            </h3>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </#list>
+                                </div>
+                                <div class="swiper-pagination hidden-xs"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                    </div>
+                </#if>
+            </@contents>
+            <!-- top/end -->
+
             <@layout.block name="contents">
                 <h2>Contents will be here</h2>
             </@layout.block>

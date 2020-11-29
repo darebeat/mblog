@@ -45,8 +45,9 @@ public class ContentsDirective extends TemplateDirective {
     @Override
     public void execute(DirectiveHandler handler) throws Exception {
         Integer channelId = handler.getInteger("channelId", 0);
-        String order = handler.getString("order", Consts.order.NEWEST);
+        Integer featured = handler.getInteger("featured", 0);
 
+        String order = (featured == 1) ? handler.getString("order", Consts.order.FEATURED) : handler.getString("order", Consts.order.NEWEST);
         Set<Integer> excludeChannelIds = new HashSet<>();
 
         if (channelId <= 0) {

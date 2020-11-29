@@ -19,9 +19,35 @@
 <a href="#" class="site-scroll-top">
     <i class="icon-arrow-up"></i>
 </a>
-
+<script src="${base}/theme/classic/dist/js/swiper-bundle.min.js"></script>
 <script type="text/javascript">
     seajs.use('main', function (main) {
         main.init();
+    });
+
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        //slidesPerColumn: 1,
+        loop: true,
+        speed:333,
+        // effect : 'fade',
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+            //type: 'fraction',
+            //type: 'progressbar',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay : {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
     });
 </script>

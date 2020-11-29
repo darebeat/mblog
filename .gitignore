@@ -24,5 +24,7 @@ rebel.xml
 .DS_Store*
 .env*
 test
+data/thumbnails/_signature/*
+data/avatars/*
 
 !/src/main/java/com/mtons/mblog/base/storage/

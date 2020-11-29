@@ -84,6 +84,9 @@ public class BeanMapUtils {
             case Consts.order.FAVOR:
                 orders = new String[]{"favors", "created"};
                 break;
+            case Consts.order.FEATURED:
+                orders = new String[]{"featured", "created"};
+                break;
             default:
                 orders = new String[]{"weight", "created"};
                 break;
