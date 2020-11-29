@@ -24,7 +24,6 @@
     seajs.use('main', function (main) {
         main.init();
     });
-
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 3,
         spaceBetween: 10,

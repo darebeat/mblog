@@ -1,4 +1,4 @@
-<@layout.extends name="/inc/layout.ftl">
+<@layout.extends name="/inc/layout_auth.ftl">
     <@layout.put block="title">
         <title>重置密码</title>
     </@layout.put>
